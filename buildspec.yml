@@ -1,0 +1,24 @@
+# AWS CodeBuild buildspec file
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      golang: 1.16
+  pre-build:
+    commands:
+      - echo "Installing dependencies"
+      - go get -d ./...
+      - 
+  build:
+    commands:
+      - mv listObjects.go listObjects.go.tmp
+      - cat listObjects.go.tmp | envsubst | tee listObjects.go
+      - go build listObjects.go
+
+artifacts:
+  files:
+    - 'listObjects'
+    - 'listObjects.exe'
+    - 'README.md'
+  name: listObjects_${GOOS}_${GOARCH}_$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7).zip
