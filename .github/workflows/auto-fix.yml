@@ -64,6 +64,7 @@ jobs:
           source_base_path_1: "verademo-go/:"
           # source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
           language: go
+          cwe: 78,117
           fixType: 'batch'
           debug: false
           prComment: true
