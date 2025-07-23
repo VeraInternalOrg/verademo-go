@@ -36,7 +36,7 @@ To run the container, clone the respository and in the project folder run this:
 
     docker compose up -d
 
-For development
+For development!
 
 Run:
 
