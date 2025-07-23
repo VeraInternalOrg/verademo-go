@@ -65,13 +65,11 @@ jobs:
           source_base_path_1: "verademo-go/:"
           # source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
           language: go
-          cwe: 78,117
-          fixType: 'single'
+          fixType: 'batch'
           debug: false
           prComment: true
           files: 'all'
           codeSuggestion: false
           createPR: true
-          token: ${{ secrets.PAT_TOKEN_SUPREME }}
 
            
