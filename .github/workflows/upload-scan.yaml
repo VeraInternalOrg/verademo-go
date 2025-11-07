@@ -26,7 +26,7 @@ jobs:
          mv ./verascan/veracode-auto-pack-verademo-go-go.zip ./verascan/artifact.zip
           
       - name: Veracode Upload And Scan
-        uses: veracode/veracode-uploadandscan-action@0.2.8
+        uses: veracode/veracode-uploadandscan-action@0.2.9
         with:
           appname: 'verademo-go'
           createprofile: true
