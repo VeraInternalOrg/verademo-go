@@ -62,14 +62,17 @@ jobs:
           vid: ${{ secrets.VERACODE_API_KEY_ID }}
           vkey: ${{ secrets.VERACODE_API_KEY_SECRET }}
           inputFile: results.json
-          source_base_path_1: "verademo-go/:"
+          #source_base_path_1: "verademo-go/:"
           # source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
-          language: go
-          fixType: 'batch'
-          debug: false
+          #language: go
+          # fixType: 'batch'
+          fixType: batch
+          debug: true
           prComment: true
-          files: 'all'
-          codeSuggestion: false
-          createPR: true
+          # files: 'all'
+          files: all
+          cwe: '80,89,113,117,159,209,327,331,404,597,611'
+          #codeSuggestion: false
+          #createPR: true
 
            
